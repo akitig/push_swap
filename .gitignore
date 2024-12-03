@@ -5,5 +5,5 @@ playground/pdf_jp.md
 *.swp
 
 .DS_Store
-.a.out
+a.out
 *.o
