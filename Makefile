@@ -6,14 +6,33 @@
 #    By: akunimot <akitig24@gmail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 19:08:23 by akunimot          #+#    #+#              #
-#    Updated: 2024/09/27 20:03:58 by akunimot         ###   ########.fr        #
+#    Updated: 2024/12/03 12:28:56 by akunimot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 ### srcs ###
-PS_SRCS =	main.c \
+PS_SRCS =	adjust.c \
+			check_stack.c \
+			ft_stack.c \
+			ft_strtoll.c \
+			ft_strtoll2.c \
+			ft_utils.c \
+			get_mincost.c \
+			get_target.c \
+			index_array.c \
+			issort.c \
+			main.c \
+			move.c \
+			papb.c \
+			print.c \
+			rarbrr.c \
+			rrr.c \
+			sasbss.c \
+			small_stack.c\
+
+
 
 LIBFT_A = libft/libft.a
 
@@ -48,10 +67,11 @@ all: $(NAME)
 $(NAME): $(PS_OBJS)
 	make -C libft all
 	make $(PS_OBJS)
-	$(CC) $(WWW) -o $(NAME) $(PS_OBJS) $(LIBFT_A)
+
 
 %.o:%.c
 	$(CC) $(WWW) -c $< -o $@
+	$(CC) $(WWW) -o $(NAME)  $(LIBFT_A) $(PRINTF_A)$(PS_OBJS)
 
 clean:
 	make -C libft clean
