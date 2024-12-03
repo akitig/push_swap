@@ -3,6 +3,7 @@
 playground/pdf_jp.md
 
 *.swp
+checker/
 
 .DS_Store
 a.out
